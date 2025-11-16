@@ -610,27 +610,30 @@ body {
   }
 
   .header-inner {
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-wrap: nowrap;
+    gap: 0;
   }
 
   .nav {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: flex-end;
+    margin-left: auto;
   }
 
   .logo {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    justify-content: flex-start;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
   }
 
   .nav-list {
     position: absolute;
     top: calc(100% + 8px);
-    left: 10px;
     right: 10px;
-    width: auto;
+    width: min(320px, calc(100vw - 20px));
     flex-direction: column;
     background: rgba(255, 255, 255, 0.98);
     padding: 16px;
